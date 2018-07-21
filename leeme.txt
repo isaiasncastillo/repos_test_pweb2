@@ -1,1 +1,2 @@
 Este es el commit inicial!
+Creado desde la plataforma.
