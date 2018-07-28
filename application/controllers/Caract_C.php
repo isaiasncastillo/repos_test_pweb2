@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/*RIGOBERTO MATA 1-158250 Y ANEUDYS RODRIGUEZ 1-15-8182*/
 class Caract_C extends CI_Controller {
 
 	public function __construct()

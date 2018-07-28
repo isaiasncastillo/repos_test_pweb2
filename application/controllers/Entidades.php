@@ -1,5 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+
+Ivan de Jesus Valentin Tejada
+Mat: 1-15-8112
+
+Ronny Liriano
+Mat:
+*/
 class Entidades extends CI_Controller {
 
 	public function __construct()

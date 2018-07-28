@@ -1,5 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+/*
+						     Luis David Caba           Danny Rodríguez Pérez
+								1-15-8297          		    1-15-8280
+*/
+
 class Caract_E extends CI_Controller {
 
 	public function __construct()

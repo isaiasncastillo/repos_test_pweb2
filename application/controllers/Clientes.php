@@ -1,5 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+	Andres de jesus Torres   1-15-7998
+	Starlin Valdez 1-15-7856
+*/
+
 class Clientes extends CI_Controller {
 
 	public function __construct()

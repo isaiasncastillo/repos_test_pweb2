@@ -3,12 +3,19 @@
 
 
 /*
-						Ángel de Jesús Pérez Rojas    Juan José Sánchez Taveras
-								1-15-8357           		1-15-8300
+   Modulo de Reservaciones.
+   Objetivo:
+   
+   Permitir crear reservaciones de habitaciones y llevar el 
+   control de los costos.
+   
+   Salidas: Listado de clientes.
+            Habitaciones.
+            Reservaciones por rango de costos y fechas.
 */
 
 
-class Reservar extends CI_Controller {
+class Reservacion extends CI_Controller {
 
 	public function __construct()
 	{
@@ -25,29 +32,27 @@ class Reservar extends CI_Controller {
 		$this->load->view('Reservar.php',(array)$output);
 	}
 
-	public function ejemplo()
-	{
-		$output = $this->grocery_crud->render();
-        $this->_example_output($output);
-	}
 
 	public function index()
 	{
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
 	}
 
-	public function reservacion()
+	public function habitaciones()
 	{
 		try{
 			$crud = new grocery_CRUD();
 
 			//$crud->set_theme('datatables');
-			$crud->set_table('Reservacion');
+			$crud->set_table('Entidades');
 			$crud->set_subject('Reservaciones');
-			$crud->required_fields('id_CL')->required_fields('id_RE')->required_fields('id_EN');
-			$crud->columns('duracion','fecha','id_CL','id_RE','id_EN','pagado');
+			//$crud->required_fields('id_CL')->required_fields('id_RE')->required_fields('id_EN');
+			//$crud->columns('duracion','fecha','id_CL','id_RE','id_EN','pagado');
+			$crud->columns('Descripcion','fecha','pagado');
 			
-			$crud->fields('duracion', 'fecha', 'id_CL', 'id_RE', 'id_EN','pagado');
+			$crud->set_relation('id_EN','Reservacion','id_');			
+			
+			$crud->fields('id_EN', 'Descripcion', 'fecha', 'pagado');
 			
 			$output = $crud->render();
 
