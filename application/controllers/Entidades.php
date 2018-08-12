@@ -34,11 +34,14 @@ class Entidades extends CI_Controller {
 	{
 			$crud = new grocery_CRUD();
 
+			
 			$crud->set_table('Entidades');
 			$crud->columns('Descripcion','id_EA','id_EN');
+			
+			$crud->set_field_upload('file_url');
 
 			$output = $crud->render();
-
-			$this->_example_output($output);
+ 
+$this->_example_output($output);
 	}
 }
